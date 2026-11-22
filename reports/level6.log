@@ -1,0 +1,12 @@
+=== Docker Compose ===
+NAME                  IMAGE               COMMAND           SERVICE   CREATED          STATUS          PORTS
+hw_3_template-app-1   hw_3_template-app   "python app.py"   app       10 seconds ago   Up 10 seconds   0.0.0.0:8080->8000/tcp, [::]:8080->8000/tcp
+=== Counter after recreation ===
+{"greeting": "Привет, Docker Compose!", "count": 3, "hostname": "19d1abae1d50", "storage": "sqlite"}
+=== Volumes ===
+DRIVER    VOLUME NAME
+local     hw_3_template_counter_data
+=== Before recreation ===
+{"greeting": "Привет, Docker Compose!", "count": 3, "hostname": "19d1abae1d50", "storage": "sqlite"}
+=== After recreation ===
+{"greeting": "Привет, Docker Compose!", "count": 3, "hostname": "62b7ecf82ce2", "storage": "sqlite"}
